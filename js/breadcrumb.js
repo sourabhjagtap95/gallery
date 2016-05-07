@@ -248,11 +248,12 @@
 					$(this).show();
 					return;
 				}
-				$(this).click(self.showLoader);	     //Now it's here
+				// $(this).click(self.showLoader);	     
 				if ($(this).hasClass('ellipsis')) {
 					self.ellipsis = $(this);
 					return;
 				}
+				$(this).click(self.showLoader);	     //Now it's here
 				if (!shorten) {
 					$(this).show();
 				}
