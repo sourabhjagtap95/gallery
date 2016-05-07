@@ -243,15 +243,17 @@
 			// We go through the array in reverse order
 			var crumbsElement = crumbs.get().reverse();
 			$(crumbsElement).each(function () {
-				$(this).click(self.showLoader);
+				// $(this).click(self.showLoader);   //Earlier it was here
 				if ($(this).hasClass('home')) {
 					$(this).show();
 					return;
 				}
+				// $(this).click(self.showLoader);	     
 				if ($(this).hasClass('ellipsis')) {
 					self.ellipsis = $(this);
 					return;
 				}
+				$(this).click(self.showLoader);	     //Now it's here
 				if (!shorten) {
 					$(this).show();
 				}
